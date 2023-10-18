@@ -1,12 +1,44 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "jsx": "react-native",
+    "lib": ["dom", "esnext"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "rootDirs": ["src", "stories"],
+    "baseUrl": ".",
     "strict": true,
+    "paths": {
+      "actions/*": ["src/actions/*"],
+      "screens/*": ["src/screens/*"],
+      "services/*": ["src/services/*"],
+      "components/*": ["src/components/*"],
+      "constants/*": ["src/constants/*"],
+      "hooks/*": ["src/hooks/*"],
+      "interfaces/*": ["src/interfaces/*"],
+      "navig/*": ["src/navig/*"],
+      "assets/*": ["assets/*"],
+      "environment": ["environment.ts"],
+      "core/*": ["src/core/*"],
+      "containers/*": ["src/containers/*"],
+      "lib/*": ["src/lib/*"],
+      "navigators/*": ["src/navigators/*"],
+      "analytics/*": ["src/services/analytics/*"],
+      "state": ["src/state"],
+      "dp-constants": ["src/dp-constants"],
+      "tests/*": ["src/__tests__/*"],
+      "mocks/*": ["src/__mocks__/*"],
+      "android/*": ["android/*"],
+      "ios/*": ["ios/*"],
+      "storybook/*": ["storybook/*"],
+      "styles/*": ["src/styles/*"],
+      "utils/*": ["src/utils/*"],
+      "test-utils": ["src/utils/test-utils"]
+    }
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
-  ]
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"]
 }
